@@ -45,7 +45,7 @@ body {
 }
 
 .open {
-    background: url(Header\ bg@2x.png);
+    background: url( /Img/Header\ bg@2x.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
