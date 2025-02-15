@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+French+Canon+SC&display=swap');
 
 html {
     scroll-behavior: smooth;
 }
+
+  
 
 
 * {
@@ -286,6 +289,86 @@ span {
 .mobile {
     width: 90%;
 }
+
+/* Container for the scrolling content */
+.scroll-content {
+    position: absolute;
+    top: 50%;
+    left: 39.8%;
+    transform: translate(-50%, -50%);
+    /* Set the height to one list item (adjust if needed) */
+    height: 60px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    line-height: 40px;
+  }
+
+.scroll-content {
+    position: relative;
+    margin-bottom: 5px;
+}
+  
+  /* The inner container with padding */
+  .scroll-content-container {
+    position: relative;
+    overflow: hidden;
+    height: 70px;
+    padding: 0 40px;
+  }
+  
+  /* The static text on the left */
+  .scroll-content-container-text {
+    display: inline;
+    float: left;
+    margin: 0;
+    height: 40px;
+    font-family: "IM Fell Dw ", serif;
+    color: darkslategrey;
+  }
+  
+  /* The list containing the items that change */
+  .scroll-content-container-list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: top;
+    animation: change 9s infinite;
+  }
+  
+  /* Each list item */
+  .scroll-content-container-list-item {
+    height: 60px;
+    line-height: 40px;
+    padding-left: 23px;
+    padding-top: 18px;
+    font-family: "IM Fell Dw ", serif;
+  }
+  
+  /* Keyframes for discrete switching between items */
+  @keyframes change {
+    /* Show the first item */
+    0%, 40% {
+      transform: translateY(0);
+    }
+    /* Transition to the second item */
+    45% {
+      transform: translateY(-60px);
+    }
+    /* Hold on the second item */
+    85% {
+      transform: translateY(-60px);
+    }
+    /* Transition back to the first item */
+    90% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
 
 @media (max-width: 768px) {
     .offcanvas {
