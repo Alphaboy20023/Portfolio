@@ -555,7 +555,7 @@ span {
     .mobilevw {
         background-image: url(./Img/header-shapes\ mobile.png);
         width: auto;
-        height: 120vh;
+        height: 78vh;
         background-size: cover;
         display: flex;
         justify-content: center;
