@@ -5,8 +5,6 @@ html {
     scroll-behavior: smooth;
 }
 
-  
-
 
 * {
     margin: 0;
@@ -18,6 +16,8 @@ body {
     background-color: #ffffff;
     box-sizing: border-box;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar-toggler:focus {
@@ -41,7 +41,7 @@ body {
 
 
 .contents {
-    width: 65%;
+    width: 75%;
 }
 
 .contents h1 {
@@ -87,6 +87,66 @@ body {
     width: 100%;
     margin-top: 35px;
     gap: 90px;
+}
+
+.wrapper {
+    display: inline-flex;
+    margin-bottom: 80px;
+}
+
+.wrapper .static-text {
+    font-size: 45px;
+    font-weight: 600;
+    font-family: "IM Fell Dw ", serif;
+    color: darkslategrey;
+    gap: 40px;
+}
+
+.wrapper .dynamic-text {
+    margin-left: 15px;
+    margin-top: 18px;
+    height: 38px;
+    overflow: hidden;
+    gap: 30px;
+}
+
+.dynamic-text li {
+    list-style: none;
+    font-size: 26px;
+    font-weight: 500;
+    color: rgb(62, 131, 187);
+    position: relative;
+    top: 0;
+    animation: slide 10s steps(2) infinite;  
+}
+
+@keyframes slide {
+    100% {
+        top: -77px;
+    }
+}
+
+.dynamic-text li span {
+    position: relative;
+
+}
+
+.dynamic-text li span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: solid rgb(62, 131, 187);
+    animation: typing 5s steps(18) infinite;
+    background-color: #ffff;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -25px 0 25px;
+    }
 }
 
 .cond {
@@ -296,78 +356,84 @@ span {
     top: 50%;
     left: 39.8%;
     transform: translate(-50%, -50%);
-    /* Set the height to one list item (adjust if needed) */
-    height: 60px;
-    margin-bottom: 50px;
+    height: auto;
+    margin-bottom: 20px;
     overflow: hidden;
     line-height: 40px;
-  }
+    width: 100%;
+}
 
 .scroll-content {
     position: relative;
     margin-bottom: 5px;
 }
-  
-  /* The inner container with padding */
-  .scroll-content-container {
+
+/* The inner container with padding */
+.scroll-content-container {
     position: relative;
     overflow: hidden;
     height: 70px;
     padding: 0 40px;
-  }
-  
-  /* The static text on the left */
-  .scroll-content-container-text {
+}
+
+/* The static text on the left */
+.scroll-content-container-text {
     display: inline;
     float: left;
     margin: 0;
     height: 40px;
     font-family: "IM Fell Dw ", serif;
     color: darkslategrey;
-  }
-  
-  /* The list containing the items that change */
-  .scroll-content-container-list {
+}
+
+/* The list containing the items that change */
+.scroll-content-container-list {
     display: inline-block;
     margin: 0;
     padding: 0;
     list-style: none;
     vertical-align: top;
     animation: change 9s infinite;
-  }
-  
-  /* Each list item */
-  .scroll-content-container-list-item {
+}
+
+/* Each list item */
+.scroll-content-container-list-item {
     height: 60px;
     line-height: 40px;
     padding-left: 23px;
     padding-top: 18px;
     font-family: "IM Fell Dw ", serif;
-  }
-  
-  /* Keyframes for discrete switching between items */
-  @keyframes change {
+}
+
+/* Keyframes for discrete switching between items */
+@keyframes change {
+
     /* Show the first item */
-    0%, 40% {
-      transform: translateY(0);
+    0%,
+    40% {
+        transform: translateY(0);
     }
+
     /* Transition to the second item */
     45% {
-      transform: translateY(-60px);
+        transform: translateY(-60px);
     }
+
     /* Hold on the second item */
     85% {
-      transform: translateY(-60px);
+        transform: translateY(-60px);
     }
+
     /* Transition back to the first item */
     90% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
+
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
-  
+}
+
 
 
 @media (max-width: 768px) {
@@ -488,11 +554,15 @@ span {
 
     .mobilevw {
         background-image: url(./Img/header-shapes\ mobile.png);
-        width: 98%;
+        width: auto;
         height: 120vh;
         background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+   
+    
+
 }
