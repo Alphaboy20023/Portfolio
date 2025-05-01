@@ -333,6 +333,10 @@ span {
     border-start-start-radius: 120px;
 }
 
+.last-screen{
+    display: none;
+}
+
 .text-center {
     margin-top: 80px;
     width: 40%;
@@ -567,7 +571,28 @@ span {
         align-items: center;
     }
 
-   
-    
+    .last-screen {
+        display: none;
+    }
 
+}
+
+@media (max-width:600px) {
+    .containers {
+        height: 111vh;
+    }
+    .last-screen{
+        display: none;
+    }
+}
+
+@media (max-width:400px) {
+    .yesDisplay {
+        display: none;
+    }
+    .last-screen{
+        display: block;
+        margin-top: 70px !important;
+        margin-bottom: 40px;
+    }
 }
