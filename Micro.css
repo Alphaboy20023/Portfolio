@@ -579,7 +579,7 @@ span {
 
 @media (max-width:600px) {
     .containers {
-        height: 111vh;
+        height: 110vh;
     }
     .last-screen{
         display: none;
@@ -592,7 +592,7 @@ span {
     }
     .last-screen{
         display: block;
-        margin-top: 70px !important;
+        margin-top: 20px !important;
         margin-bottom: 40px;
     }
 }
