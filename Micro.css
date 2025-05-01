@@ -578,9 +578,9 @@ span {
 }
 
 @media (max-width:600px) {
-    .containers {
+    /* .containers {
         height: 110vh;
-    }
+    } */
     .last-screen{
         display: none;
     }
