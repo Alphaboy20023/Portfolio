@@ -25,27 +25,35 @@ body {
 }
 
 nav {
-   height: 71px;  
+   height: 65px;  
 }
 
-.content {
+.container_2 {
     border-end-start-radius: 150px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .containers {
-    background-image: url(./Img/Header\ bg@2x.png);
     width: 98%;
-    height: 110vh;
-    background-size: cover;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+}
+
+.image_set {
+    background-image: url(./Img/Header\ bg@2x.png);
+    background-size: cover;
+    margin-top: 45px;
+    display: flex;
+    padding: 10px;
+    
 }
 
 
 .contents {
-    width: 75%;
+    width: 78%;
 }
 
 .contents h1 {
@@ -299,7 +307,7 @@ span {
     width: 90%;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 
@@ -311,6 +319,8 @@ span {
     gap: 10px;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 8px;
 }
 
 .bg {
@@ -444,6 +454,62 @@ span {
 }
 
 
+.portfolio-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 60px 0;
+}
+
+/* Ring container with animated shadow */
+.moving-shadow-ring {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotateShadow 5s linear infinite;
+  transition: box-shadow 0.8s ease, transform 0.6s ease;
+}
+
+/* Image inside the circle */
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+
+.moving-shadow-ring:hover {
+  box-shadow: 0 0 40px 10px rgba(100, 100, 255, 0.7); /* bluish glow */
+  transform: scale(1.03); 
+}
+
+/* Rotating shadow animation */
+@keyframes rotateShadow {
+  0% {
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
+  }
+  25% {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
+  }
+  75% {
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+
+
+
+
 
 @media (max-width: 768px) {
     .offcanvas {
@@ -462,7 +528,7 @@ span {
         color: white !important;
     }
 
-    .content {
+    .container_2 {
         height: auto;
         padding: -50px;
         border-end-start-radius: 90px;
@@ -554,18 +620,10 @@ span {
     }
 
     .contents {
-        width: 80%;
+        width: auto;
     }
 
     .containers {
-        display: none;
-    }
-
-    .mobilevw {
-        background-image: url(./Img/header-shapes\ mobile.png);
-        width: auto;
-        height: 82vh;
-        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -577,12 +635,16 @@ span {
 
 }
 
+
 @media (max-width:600px) {
-    /* .containers {
-        height: 110vh;
-    } */
+    
     .last-screen{
         display: none;
+    }
+
+    .portfolio-wrapper {
+        display: flex;
+        justify-content: center;
     }
 }
 
