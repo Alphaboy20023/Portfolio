@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=IM+Fell+French+Canon+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Tektur:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 
 html {
     scroll-behavior: smooth;
@@ -18,6 +21,12 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
+}
+
+.logo{
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    color: #206cdf;
 }
 
 .navbar-toggler:focus {
@@ -108,34 +117,37 @@ nav {
 }
 
 .wrapper .static-text {
-    font-size: 41px;
-    font-weight: 600;
-    font-family: "IM Fell Dw ", serif;
+    font-size: 39px;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     color: darkslategrey;
-    gap: 40px;
+    gap: 30px;
 }
 
 .wrapper .dynamic-text {
     margin-left: 15px;
-    margin-top: 15px;
-    height: 38px;
+    margin-top: 11px;
+    height: 40px;
     overflow: hidden;
-    gap: 30px;
+    gap: 65px;
 }
 
 .dynamic-text li {
     list-style: none;
-    font-size: 26px;
-    font-weight: 500;
+    font-size: 28px;
     color: #000;
     position: relative;
     top: 0;
     animation: slide 10s steps(2) infinite;  
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 @keyframes slide {
     100% {
-        top: -77px;
+        top: -85px;
     }
 }
 
@@ -151,14 +163,14 @@ nav {
     height: 100%;
     width: 100%;
     border-left: solid rgb(62, 131, 187);
-    animation: typing 5s steps(18) infinite;
+    animation: typing 5s steps(19) infinite;
     background-color: #ffff;
 }
 
 @keyframes typing {
     100% {
         left: 100%;
-        margin: 0 -25px 0 25px;
+        margin: 0 -25px 0 28px;
     }
 }
 
@@ -320,7 +332,7 @@ span {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 8px;
+    padding: auto;
 }
 
 .bg {
@@ -369,11 +381,10 @@ span {
     width: 90%;
 }
 
-/* Container for the scrolling content */
 .scroll-content {
     position: absolute;
     top: 50%;
-    left: 39.8%;
+    left: 42%;
     transform: translate(-50%, -50%);
     height: auto;
     margin-bottom: 20px;
@@ -387,41 +398,43 @@ span {
     margin-bottom: 5px;
 }
 
-/* The inner container with padding */
+
 .scroll-content-container {
     position: relative;
     overflow: hidden;
-    height: 70px;
+    height: 60px;
     padding: 0 40px;
 }
 
-/* The static text on the left */
+
 .scroll-content-container-text {
     display: inline;
     float: left;
     margin: 0;
-    height: 40px;
-    font-family: "IM Fell Dw ", serif;
-    color: darkslategrey;
+    height: 28px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
-/* The list containing the items that change */
 .scroll-content-container-list {
     display: inline-block;
     margin: 0;
     padding: 0;
     list-style: none;
-    vertical-align: top;
-    animation: change 9s infinite;
+    vertical-align: center;
+    animation: change 8s infinite;
 }
 
-/* Each list item */
+
 .scroll-content-container-list-item {
-    height: 60px;
-    line-height: 40px;
-    padding-left: 23px;
-    padding-top: 18px;
-    font-family: "IM Fell Dw ", serif;
+    height: 62px;
+    line-height: 38px;
+    padding-left: 19px;
+    padding-top: 21px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 /* Keyframes for discrete switching between items */
@@ -461,7 +474,7 @@ span {
   padding: 60px 0;
 }
 
-/* Ring container with animated shadow */
+
 .moving-shadow-ring {
   width: 250px;
   height: 250px;
@@ -471,7 +484,6 @@ span {
   transition: box-shadow 0.8s ease, transform 0.6s ease;
 }
 
-/* Image inside the circle */
 .portfolio-img {
   width: 100%;
   height: 100%;
