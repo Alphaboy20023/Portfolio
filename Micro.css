@@ -111,78 +111,46 @@ nav {
 }
 
 .wrapper {
-    display: inline-flex;
-    margin-bottom: 17px;
-    background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 17px;
+  align-items: flex-end;
+  margin-top: 25px;
 }
 
-.wrapper .static-text {
-    font-size: 39px;
-    font-family: "Lato", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: darkslategrey;
-    gap: 30px;
+.static-text {
+  font-size: 28px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  color: black;
 }
 
-.wrapper .dynamic-text {
-    margin-left: 15px;
-    margin-top: 11px;
-    height: 40px;
-    overflow: hidden;
-    gap: 65px;
+.dynamic-text {
+  font-size: 28px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  position: relative;
+  color: #206cdf;
+  min-width: 280px;
 }
 
-.dynamic-text li {
-    list-style: none;
-    font-size: 28px;
-    color: #000;
-    position: relative;
-    top: 0;
-    animation: slide 10s steps(2) infinite;  
-    font-family: "Lato", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+.typing-text::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  background: rgb(62, 131, 187);
+  margin-left: 3px;
+  animation: blink 1.5s infinite;
+  vertical-align: middle;
 }
 
-@keyframes slide {
-    100% {
-        top: -85px;
-    }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-.dynamic-text li span {
-    position: relative;
-
-}
-
-.dynamic-text li span::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-left: solid rgb(62, 131, 187);
-    animation: typing 5s steps(19) infinite;
-    background-color: #ffff;
-}
-
-@keyframes typing {
-    100% {
-        left: 100%;
-        margin: 0 -25px 0 28px;
-    }
-}
-
-.cond {
-    gap: 20px;
-    background-color: #EBEBFF;
-    margin: 2px;
-    padding: 9px;
-    color: #6070FF;
-    max-width: auto;
-    border-radius: 8px;
-}
 
 .conol {
     background-color: #EBEBFF;
@@ -470,27 +438,18 @@ span {
 }
 
 
-.portfolio-wrapper {
-  display: flex;
-  justify-content: start;
-  align-items: center; 
-  padding: 20px;
+.circular-image {
+  width: 250px;            
+  height: 250px;
+  border-radius: 50%;       
+  object-fit: cover;       
+  display: block;         
+  margin: 0 auto;
+  position: relative;
+  left: 60px;
+  top: 40px;
 }
 
-.portfolio-img{
-    height: 270px;
-    width: 270px;
-    border-radius: 50%;
-}
-
-.img-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
 
 
 
@@ -505,6 +464,17 @@ span {
         color: white !important;
         position: relative;
         top: -40px;
+    }
+
+    .circular-image{
+        position: relative;
+
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        left: 0px;
+        padding: 15px;
+
     }
 
     .offcanvas .bx-x {
